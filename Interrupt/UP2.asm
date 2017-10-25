@@ -1,0 +1,11 @@
+.ORIG x3400
+	 AND R1, R1, #0 ; Clear R1
+LOOP ADD R1, R1, #1 ; Add R1
+	 BRp LOOP
+	 LEA R0, ASTERISK
+	 PUTS
+     AND R1, R1, #0
+	 BRnzp LOOP
+
+ASTERISK .STRINGZ "*"
+.END
